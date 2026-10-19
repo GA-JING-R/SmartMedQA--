@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>医疗知识图谱问答系统</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">⚕</span>
+        <div class="brand-text">
+          <h1>医疗知识图谱问答</h1>
+          <p class="sub">Neo4j 图谱 · 固定格式问答</p>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button id="stats-btn" class="ghost-btn" type="button" title="查看图谱统计">图谱统计</button>
+        <span id="db-status" class="status status--loading">检测中…</span>
+      </div>
+    </header>
+
+    <main id="chat" class="chat">
+      <section class="welcome" id="welcome">
+        <h2>你好，可以这样问我</h2>
+        <p class="hint">点击下面的示例直接提问，或者在下方输入框自由输入。</p>
+        <div id="examples" class="examples"></div>
+      </section>
+    </main>
+
+    <form id="ask-form" class="composer" autocomplete="off">
+      <input id="question" type="text" placeholder="例如：感冒的症状有哪些" maxlength="200">
+      <button type="submit" id="send">发送</button>
+    </form>
+  </div>
+
+  <!-- 统计弹窗 -->
+  <div id="stats-modal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>图谱统计</h3>
+        <button id="stats-close" class="ghost-btn" type="button">关闭</button>
+      </div>
+      <div id="stats-body" class="modal-body">加载中…</div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

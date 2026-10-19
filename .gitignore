@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地配置与日志
+.env
+.env.*
+*.log
+
+# 运行时产物
+instance/
+.pytest_cache/
+.coverage
+htmlcov/
